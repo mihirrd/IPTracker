@@ -9,6 +9,7 @@ class Searchbar extends Component {
         ip : "",
         loc : {},
         isp : "",
+        as_name : ""
         
         
     }
@@ -24,10 +25,11 @@ class Searchbar extends Component {
         let fetchedData = {}
         await axios.get(url).then(res => fetchedData = res.data)
         .catch(e => console.log(e))
-
+        
         this.setState({
             loc : fetchedData.location,
-            isp : fetchedData.isp 
+            isp : fetchedData.isp,
+            as_name : fetchedData.as.name
         })
     }
 
@@ -44,8 +46,7 @@ class Searchbar extends Component {
                         />
                     <button 
                     className = {styles.button} 
-                    onClick = {this.handleSearch}
-                    > {'>'} </button>
+                    onClick = {this.handleSearch}> GO </button>
                 </div>
                 <Main 
                     country = {this.state.loc.country} 
@@ -53,6 +54,7 @@ class Searchbar extends Component {
                     region = {this.state.loc.region}
                     city = {this.state.loc.city}
                     tzone = {this.state.loc.timezone}
+                    asname = {this.state.as_name}
                     isp = {this.state.isp}
                     />
             </div>

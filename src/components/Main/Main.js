@@ -13,8 +13,8 @@ function Main(props) {
             <div className = {styles.loc}>
                 <h4 className = {styles.location}>LOCATION</h4>
                 <p className = {styles.city}>{props.city}</p>
-                <p className = {styles.region}>{props.region}</p>
-                <p className = {styles.country}>{props.country}</p>    
+                <p className = {styles.region}>{props.region}, {props.country}</p>
+                  
             </div>
             <div className = {styles.tzone}>
                 <h4>TIME ZONE</h4>
@@ -23,10 +23,10 @@ function Main(props) {
             </div>
             <div className = {styles.isp}>
                 <h4>ISP</h4>
-                <h1>{props.isp}</h1>
-                
+                <p className = {styles.ispname}>{props.isp}</p>
+                <p className = {styles.asname}>{props.asname}</p>
             </div>
-        </div>
+        </div> 
     )
 }
 
