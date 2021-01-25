@@ -2,39 +2,73 @@
     position: absolute;
     height : 10em;
     width : 60em;
-    background-color: rgb(206, 202, 202);
+    background-color:white;
     margin-left: 16%;
     margin-top: 8em;
     border-radius: 15px;
     display: flex;
     justify-content: center;
-    
+    padding: 0;
 }
 
+h4{
+    text-align: center;
+}
 .ip{
     height: 100%;
     width: 25%;
-    background-color: tomato;
+    
     border-radius: 15px;
+    text-align: center;
+    border-right: 1px gray ;
+   
+    
+}
+.city{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.region{
+    color: rgb(83, 82, 82);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.country{
+    color: rgb(83, 82, 82);
+    font-weight: 300;
+    font-size: 15px;
 }
 
 .loc{
     height: 100%;
     width: 25%;
-    background-color: tomato;
+    
     border-radius: 15px;
+    text-align: center;
+    
+    
 }
 
 .tzone{
     height: 100%;
     width: 25%;
-    background-color: tomato;
+    
     border-radius: 15px;
+    text-align: center;
+    
 }
+
 
 .isp{
     height: 100%;
     width: 25%;
-    background-color: tomato;
+    
     border-radius: 15px;
+    text-align: center;
+    
+}
+p{
+    margin: 7px;
 }
