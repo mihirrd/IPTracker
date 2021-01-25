@@ -1,0 +1,29 @@
+.bg{
+    background-image: url("../../images/pattern-bg.png");
+    height: 14em;
+}
+.searchcontainer{
+    display: flex;
+    
+}
+.bar{
+    position: absolute;
+    margin-top: 5em;
+    height: 3em;
+    width: 30em;
+    margin-left: 35%;
+}
+.button{
+    position: absolute;
+    margin-top: 54px;
+    height: 2.5em;
+    width: 2.5em;
+    margin-left: 61%;
+    background-color:rgb(41, 38, 38);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+}

@@ -1,0 +1,40 @@
+.box{
+    position: absolute;
+    height : 10em;
+    width : 60em;
+    background-color: rgb(206, 202, 202);
+    margin-left: 16%;
+    margin-top: 8em;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.ip{
+    height: 100%;
+    width: 25%;
+    background-color: tomato;
+    border-radius: 15px;
+}
+
+.loc{
+    height: 100%;
+    width: 25%;
+    background-color: tomato;
+    border-radius: 15px;
+}
+
+.tzone{
+    height: 100%;
+    width: 25%;
+    background-color: tomato;
+    border-radius: 15px;
+}
+
+.isp{
+    height: 100%;
+    width: 25%;
+    background-color: tomato;
+    border-radius: 15px;
+}
