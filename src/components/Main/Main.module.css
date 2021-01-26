@@ -1,18 +1,18 @@
 .box{
+    background-color: white;
+    height : 10vw;
+    width : 80vw;
     position: absolute;
-    height : 10em;
-    width : 60em;
-    background-color:white;
-    margin: 0 auto;
-    margin-top: 8em;
-    border-radius: 15px;
+    margin-top: -5vw;
+    border-radius: 1vw;
     display: flex;
+    flex-flow: wrap;
     justify-content: center;
-    padding: 0;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+    box-shadow: 0px 5px 6px rgb(134, 134, 134);
 }
 
 h4{
@@ -29,33 +29,38 @@ h4{
    
     
 }
+.loc{
+    width: 25%;
+    text-align: center;
+}
 .city{
+    text-align: center;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 2vw;
 }
 
 .region{
     color: rgb(83, 82, 82);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.5vw;
+    text-align: center;
 }
 
 .country{
     color: rgb(83, 82, 82);
     font-weight: 300;
-    font-size: 15px;
-}
-
-.loc{
-    height: 100%;
-    width: 25%;
-    
-    border-radius: 15px;
+    font-size: 1vw;
     text-align: center;
-    
-    
 }
 
+.heading{
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+    color: rgb(99, 98, 98);
+    font-weight: 600;
+    text-align: center;
+}
 .tzone{
     height: 100%;
     width: 25%;
@@ -75,16 +80,17 @@ h4{
     
 }
 p{
-    margin: 7px;
+    margin: 0.5vh;
+    font-size: 2vw;
 }
 
 .ispname{
     font-weight: 600;
-    font-size: 25px;
+    font-size: 2vw;
 }
 
 .asname{
     color: rgb(83, 82, 82);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
