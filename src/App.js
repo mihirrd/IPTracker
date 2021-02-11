@@ -2,7 +2,7 @@ import React, {Component}from 'react'
 import axios from 'axios'
 import styles from './App.module.css'
 import Main from './components/Main/Main.js';
-
+import { MapDiv } from './components/MapDiv/MapDiv';
 
 
 class App extends Component{
@@ -36,6 +36,7 @@ class App extends Component{
           lat : fetchedData.location.lat,
           long : fetchedData.location.lng
       })
+      console.log(`lat : ${this.state.lat} log : ${this.state.long}`)
       } catch (error) {
         alert("Wrong IP address\n" + error)
       }
@@ -70,6 +71,10 @@ class App extends Component{
           asname = {this.state.as_name}
           isp = {this.state.isp}
             />
+          <MapDiv/>
+          
+
+          
           
             
     
@@ -83,3 +88,4 @@ class App extends Component{
 }
 
 export default App;
+
