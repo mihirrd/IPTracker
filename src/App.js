@@ -2,7 +2,7 @@ import React, {Component}from 'react'
 import axios from 'axios'
 import styles from './App.module.css'
 import Main from './components/Main/Main.js';
-import { MapDiv } from './components/MapDiv/MapDiv';
+import MapDiv  from './components/MapDiv/MapDiv';
 
 
 class App extends Component{
@@ -19,8 +19,9 @@ class App extends Component{
   
   handleChange =(event)=>{
     const {value} = event.target
-    this.setState({ip : value})
-    
+    this.setState({
+      ip : value
+    })
   }
 
   handleSearch = async()=>{
@@ -53,15 +54,16 @@ class App extends Component{
       <div className = {styles.container}>
         <div className = {styles.topbg}>
           <input 
-              type="text" value = {this.state.ip} 
+              type="text" value = {this.ip_value} 
               name="search" placeholder="Search.."
-              className= {styles.searchbar}
               onChange = {this.handleChange}
+              className= {styles.searchbar}
               />
           <button  
           onClick = {this.handleSearch}
           className = {styles.button}> GO </button>
           </div>
+          <MapDiv latlong  = {[this.state.lat, this.state.long]} />
           <Main 
           country = {this.state.loc.country} 
           ip = {this.state.ip}
@@ -71,7 +73,7 @@ class App extends Component{
           asname = {this.state.as_name}
           isp = {this.state.isp}
             />
-          <MapDiv/>
+          
           
 
           

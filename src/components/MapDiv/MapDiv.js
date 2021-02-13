@@ -1,61 +1,25 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper,InfoWindow, Marker } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker} from 'google-maps-react';
+import styles from './MapDiv.module.css'
 
-const mapStyles = {
-    position: 'absolute',
-    width: '100%',
-    height: '100%'
-};
 
 export class MapDiv extends Component {
-    state = {
-        showingInfoWindow: false,  // Hides or shows the InfoWindow
-        activeMarker: {},          // Shows the active marker upon click
-        selectedPlace: {}          // Shows the InfoWindow to the selected place upon a marker
-      };
-
-      onMarkerClick = (props, marker, e) =>
-        this.setState({
-        selectedPlace: props,
-        activeMarker: marker,
-        showingInfoWindow: true
-        });
-
-  onClose = props => {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null
-      });
-    }
-  };
-
+    
     render() {
         return (
           <Map
+            key={this.props.latlong}
+            className = {styles.container}
             google={this.props.google}
             zoom={14}
-            style={mapStyles}
             initialCenter={
               {
-                lat: -1.2884,
-                lng: 36.8233
+                lat: this.props.latlong[0],
+                lng: this.props.latlong[1]
               }
             }
           >
-            <Marker
-              onClick={this.onMarkerClick}
-              name={'Kenyatta International Convention Centre'}
-            />
-            <InfoWindow
-              marker={this.state.activeMarker}
-              visible={this.state.showingInfoWindow}
-              onClose={this.onClose}
-            >
-              <div>
-                <h4>{this.state.selectedPlace.name}</h4>
-              </div>
-            </InfoWindow>
+           <Marker/>
           </Map>
         );
       }
