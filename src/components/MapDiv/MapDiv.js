@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker} from 'google-maps-react';
 import styles from './MapDiv.module.css'
+import dotenv from 'dotenv'
+
 
 
 export class MapDiv extends Component {
     
+  
     render() {
         return (
           <Map
@@ -26,5 +29,5 @@ export class MapDiv extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyAtvbcIjB_cZyDl1htRbqFZ3YNNnzKXYCc'
+  apiKey: dotenv.config({API_KEY : '../apikey_config/config.env'})
 })(MapDiv);
